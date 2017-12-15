@@ -1,0 +1,65 @@
+﻿<Window x:Class="Pizza_Project.Window_Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pizza_Project"
+        mc:Ignorable="d"
+        Title="Window_Login" Height="900" Width="1800" WindowStartupLocation="CenterScreen" Cursor="Arrow" ResizeMode="NoResize" WindowState="Maximized" AllowsTransparency="True" WindowStyle="None" Background="#CC111111">
+    <Grid>
+        <!--Login-->
+        <Canvas >
+            <Label Content="X" FontSize="24" FontFamily="supermarket" Canvas.Left="1091" Canvas.Top="132" Background="{x:Null}"  Panel.ZIndex="3" Width="28" MouseDown="Label_MouseDown" Height="47" />
+            <Ellipse Height="40" Width="40" Canvas.Left="1083" Canvas.Top="139" Fill="Red" Panel.ZIndex="2" >
+
+            </Ellipse>
+            <Image Source="images/icon/padlock.png" Canvas.Left="843" Canvas.Top="202" Panel.ZIndex="3" Height="153" Width="153"/>
+            <Label Content="ยินดีต้อนรับ" Canvas.Left="825" Canvas.Top="347" Panel.ZIndex="4" Background="{x:Null}" FontFamily="supermarket" FontSize="48" Foreground="#FF00703C"/>
+            <Label Content="กรุณาเข้าสู่ระบบ" Canvas.Left="863" Canvas.Top="418" Panel.ZIndex="4" Background="{x:Null}" FontFamily="supermarket" Foreground="#FFAAAAAA" FontSize="20"/>
+            <!--Email & Password-->
+
+            <Canvas  />
+
+
+            <!--Email-->
+
+            <TextBox x:Name="TEXT_Uername" LostFocus="TEXT_Uername_LostFocus"  Height="40" TextWrapping="Wrap" Width="286" Canvas.Left="784" Canvas.Top="473" Panel.ZIndex="2" Background="White" FontFamily="supermarket" FontSize="22"/>
+            <TextBox x:Name="watermarkedText" GotFocus="watermarkedText_GotFocus" Text="E-MAIL" Height="40" HorizontalAlignment="Right" Width="286" FontSize="22" FontFamily="supermarket" Foreground="#FFC9C9C9" Canvas.Top="473" Canvas.Left="784" Panel.ZIndex="3" Background="White"/>
+
+
+            <!--Password-->
+            <PasswordBox x:Name="TEXT_Password" LostFocus="TEXT_Password_LostFocus" Height="40" HorizontalAlignment="Left" Width="286" Canvas.Top="529" Canvas.Left="784" Panel.ZIndex="2" Background="White" FontFamily="supermarket" FontSize="22"/>
+            <TextBox x:Name="watermarkedTextPass" GotFocus="watermarkedTextPass_GotFocus" Text="PASSWORD" Height="40" HorizontalAlignment="Right" Width="286" FontSize="22" FontFamily="supermarket" Foreground="#FFC9C9C9" Canvas.Top="529" Canvas.Left="784" Panel.ZIndex="3" Background="White"/>
+
+
+
+            <Border Height="563" Width="367" Canvas.Left="739" Canvas.Top="154" Background="White" CornerRadius="8,8,8,8" Panel.ZIndex="0">
+
+                <Border.Effect>
+                    <DropShadowEffect Direction="320" BlurRadius="20" ShadowDepth="8"/>
+                </Border.Effect>
+            </Border>
+
+            <Border Canvas.Left="788" CornerRadius="8,8,8,8" Height="50" Width="278" Canvas.Top="599"  Panel.ZIndex="3" x:Name="_Sing_up" MouseDown="_Sing_up_MouseDown">
+
+                <Border.Style>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="Background" Value="#FF008F4D"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background"  Value="#E5008F4D"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Border.Style>
+
+                <DockPanel Width="130" >
+                    <Image Source="images/icon/padlockin.png" Width="20" Margin="10,3,-10,3"/>
+                    <Label Content="เข้าสู่ระบบ" Foreground="White"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Cursor="Hand" FontFamily="supermarket" FontSize="22" />
+                </DockPanel>
+
+            </Border>
+            <Label x:Name="Click_signUp" Content="ไม่ได้เป็นสมาชิก? คลิกที่นี่เพื่อลงทะเบียน " Canvas.Left="825" Canvas.Top="670" Width="200" FontFamily="supermarket" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center" MouseDown="Click_signUp_MouseDown"/>
+        </Canvas>
+    </Grid>
+</Window>

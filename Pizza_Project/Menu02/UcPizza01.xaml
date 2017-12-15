@@ -1,0 +1,283 @@
+﻿<UserControl x:Class="Pizza_Project.UserController.UcPizza01"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Pizza_Project.UserController"
+             mc:Ignorable="d" Loaded="UserControl_Loaded" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Background="#FFF7F7F7"/>
+        <StackPanel Margin="0,80,0,0"  Width="1500" HorizontalAlignment="Center">
+            <Canvas Height="1832" >
+                <!--Bt01-->
+                <Button Height="340"  FontFamily="supermarket" Style="{DynamicResource menubutonPizza}" RenderTransformOrigin="0.63,0.512" Margin="0" Canvas.Left="120" VerticalAlignment="Center" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" >
+                    <DockPanel Width="1265" Height="330" HorizontalAlignment="Center" >
+                        <Canvas>
+                            <Image Source="/Pizza_Project;component/images/Pizza/Pan_01.png" Width="420" Height="330"  />
+                            <ComboBox Width="260" Canvas.Left="425" Canvas.Top="229" Height="70" Background="#FF00703C" BorderBrush="{x:Null}" Foreground="Black" x:Name="pizzaType1"  FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center" SelectionChanged="pizzaType1_SelectionChanged" >
+                                <ComboBoxItem Foreground="Black"  x:Name="Combo_Margin01" IsSelected="True" Height="60" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,-1,0" Width="260" >แป้งหนานุ่ม</ComboBoxItem>
+                                <ComboBoxItem Foreground="Black" x:Name="Combo_Margin02" Height="60" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,-1,0" Width="260" >แป้งบางกรอบ</ComboBoxItem>
+                                <ComboBoxItem Foreground="Black"  x:Name="Combo_Margin03" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="1,0" Width="257" >เอ็กซ์ตรีม ขอบชีส</ComboBoxItem>
+                                <ComboBoxItem Foreground="Black" x:Name="Combo_Margin04" Height="60" >เอ็กซ์ตรีม ไส้กรอกและชีส</ComboBoxItem>
+                            </ComboBox>
+
+
+                            <!--SIZE Pizza-->
+                            <ComboBox x:Name="pizzaSize1" Width="260" Canvas.Left="713" Canvas.Top="229" Height="70" HorizontalAlignment="Center" FontSize="22" VerticalAlignment="Center" SelectionChanged="pizzaSize1_SelectionChanged"  >
+                                <ComboBoxItem Foreground="Black"  Height="60" IsSelected="True" Margin="0" Width="260">กลาง</ComboBoxItem>
+                                <ComboBoxItem Foreground="Black"  Width="260" Height="60" >ใหญ่</ComboBoxItem>
+                            </ComboBox>
+                            <Label Content="ฮาวายเอี้ยน" HorizontalAlignment="Left"  FontSize="36" Canvas.Left="396" Canvas.Top="28" />
+                            <Label Content="สัปปะรด แฮม เบคอนแผ่น มอสซาเรลล่าชีส ซอสพิซซ่า" Width="610" FontSize="20" Canvas.Left="425" Canvas.Top="85"/>
+                            <Label Content="เลือกขอบ" FontSize="18" Canvas.Left="425" Canvas.Top="188" />
+                            <Label Content="เลือกขนาด" FontSize="18" Canvas.Left="713" Canvas.Top="188" />
+                            <Canvas  >
+
+                                <Border Canvas.Left="1001" CornerRadius="10,10,10,10" Height="56"  Width="244" Canvas.Top="236" Background="#CCFF0000" x:Name="Budget1" >
+
+                                    <Border.Style>
+                                        <Style TargetType="{x:Type Border}">
+                                            <Setter Property="Background" Value="Black"/>
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Background"  Value="#FFFFB3B3"/>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Border.Style>
+
+                                    <Canvas Width="247">
+                                        <Image Source="/Pizza_Project;component/images/icon/White_shopping-basket.png" Width="40" Height="42" Canvas.Left="192" Canvas.Top="7"/>
+                                        <Label Content="+" FontSize="36" Foreground="White" Canvas.Left="162" Canvas.Top="-11"/>
+                                        <Label Content="บาท" Foreground="White" FontSize="24" Canvas.Left="94" Height="52" Width="46" Canvas.Top="4" />
+                                        <Label Content="319" HorizontalAlignment="Left" Canvas.Left="10" Canvas.Top="6" FontSize="22" Foreground="White" x:Name="Result_price1" Width="91" Height="40"/>
+
+                                    </Canvas>
+
+                                </Border>
+                            </Canvas>
+
+
+                        </Canvas>
+
+                    </DockPanel>
+                </Button>
+                <!--Bt02-->
+                <Button Height="357"  FontFamily="supermarket" Style="{DynamicResource menubutonPizza}" RenderTransformOrigin="0.63,0.512" Margin="0" Canvas.Left="120" VerticalAlignment="Center" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Canvas.Top="340" >
+                    <DockPanel Width="1265" Height="330" HorizontalAlignment="Center" >
+                        <Canvas>
+                            <Image Source="/Pizza_Project;component/images/Pizza/Pan_02.png" Width="420" Height="330"  />
+                            <ComboBox Width="260" Canvas.Left="425" Canvas.Top="229" Height="70" Background="#FF00703C" BorderBrush="{x:Null}" Foreground="Black"  x:Name="pizzaType2"  FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center" SelectionChanged="pizzaType2_SelectionChanged" >
+                                <ComboBoxItem Foreground="Black"   IsSelected="True" Height="60" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,-1,0" Width="260" Content="แป้งหนานุ่ม"/>
+                                <ComboBoxItem Foreground="Black"  Height="60" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,-1,0" Width="260" Content="แป้งบางกรอบ"/>
+                                <ComboBoxItem Foreground="Black"   Height="60" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="1,0" Width="257" Content="เอ็กซ์ตรีม ขอบชีส"/>
+                                <ComboBoxItem Foreground="Black"  Height="60" Content="เอ็กซ์ตรีม ไส้กรอกและชีส"/>
+                            </ComboBox>
+
+
+                            <!--SIZE Pizza-->
+                            <ComboBox x:Name="pizzaSize2" Width="260" Canvas.Left="713" Canvas.Top="229" Height="70" HorizontalAlignment="Center" FontSize="22" VerticalAlignment="Center" SelectionChanged="pizzaSize2_SelectionChanged"  >
+                                <ComboBoxItem Foreground="Black"  Height="60" IsSelected="True" Margin="0" Width="260" Content="กลาง"/>
+                                <ComboBoxItem Foreground="Black"  Width="260" Height="60" Content="ใหญ่"/>
+                            </ComboBox>
+                            <Label Content="ซีฟู้ดเดอลุกซ์" HorizontalAlignment="Left"  FontSize="36" Canvas.Left="396" Canvas.Top="28" />
+                            <Label Content="หัวหอม พริกหยวก ซีฟู้ดมิกซ์ กุ้ง มอสซาเรลล่าชีส ปูอัด ซอสมารีนาร่า" Width="610" FontSize="20" Canvas.Left="425" Canvas.Top="85"/>
+                            <Label Content="เลือกขอบ" FontSize="18" Canvas.Left="425" Canvas.Top="188" />
+                            <Label Content="เลือกขนาด" FontSize="18" Canvas.Left="713" Canvas.Top="188" />
+                            <Canvas  >
+
+                                <Border Canvas.Left="1001" CornerRadius="10,10,10,10" Height="56"  Width="244" Canvas.Top="236" Background="#CCFF0000" x:Name="Budget2" >
+
+                                    <Border.Style>
+                                        <Style TargetType="{x:Type Border}">
+                                            <Setter Property="Background" Value="Black"/>
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Background"  Value="#FFFFB3B3"/>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Border.Style>
+
+                                    <Canvas Width="247">
+                                        <Image Source="/Pizza_Project;component/images/icon/White_shopping-basket.png" Width="40" Height="42" Canvas.Left="192" Canvas.Top="7"/>
+                                        <Label Content="+" FontSize="36" Foreground="White" Canvas.Left="162" Canvas.Top="-11"/>
+                                        <Label Content="บาท" Foreground="White" FontSize="24" Canvas.Left="94" Height="52" Width="46" Canvas.Top="4" />
+                                        <Label Content="319" HorizontalAlignment="Left" Canvas.Left="10" Canvas.Top="6" FontSize="22" Foreground="White" x:Name="Result_price2" Width="91" Height="40"/>
+
+                                    </Canvas>
+
+                                </Border>
+                            </Canvas>
+
+
+                        </Canvas>
+
+                    </DockPanel>
+                </Button>
+
+                <!--Bt03-->
+                <Button Height="357"  FontFamily="supermarket" Style="{DynamicResource menubutonPizza}" RenderTransformOrigin="0.63,0.512" Margin="0" Canvas.Left="120" VerticalAlignment="Center" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Canvas.Top="702" >
+                    <DockPanel Width="1265" Height="330" HorizontalAlignment="Center" >
+                        <Canvas>
+                            <Image Source="/Pizza_Project;component/images/Pizza/Pan_03.png" Width="420" Height="330"  />
+                            <ComboBox Width="260" Canvas.Left="425" Canvas.Top="229" Height="70" Background="#FF00703C" BorderBrush="{x:Null}" Foreground="Black"  x:Name="pizzaType3"  FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center" SelectionChanged="pizzaType3_SelectionChanged" >
+                                <ComboBoxItem Foreground="Black"   IsSelected="True" Height="60" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,-1,0" Width="260" Content="แป้งหนานุ่ม"/>
+                                <ComboBoxItem Foreground="Black"  Height="60" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,-1,0" Width="260" Content="แป้งบางกรอบ"/>
+                                <ComboBoxItem Foreground="Black"   Height="60" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="1,0" Width="257" Content="เอ็กซ์ตรีม ขอบชีส"/>
+                                <ComboBoxItem Foreground="Black"  Height="60" Content="เอ็กซ์ตรีม ไส้กรอกและชีส"/>
+                            </ComboBox>
+
+
+                            <!--SIZE Pizza-->
+                            <ComboBox x:Name="pizzaSize3" Width="260" Canvas.Left="713" Canvas.Top="229" Height="70" HorizontalAlignment="Center" FontSize="22" VerticalAlignment="Center" SelectionChanged="pizzaSize3_SelectionChanged"  >
+                                <ComboBoxItem Foreground="Black"  Height="60" IsSelected="True" Margin="0" Width="260" Content="กลาง"/>
+                                <ComboBoxItem Foreground="Black"  Width="260" Height="60" Content="ใหญ่"/>
+                            </ComboBox>
+                            <Label Content="ซีฟู้ดค็อกเทล" HorizontalAlignment="Left"  FontSize="36" Canvas.Left="396" Canvas.Top="28" />
+                            <Label Content="สัปปะรด แฮม กุ้ง ปูอัด มอสซาเรลล่าชีส ซอสเทาซันไอส์แลนด์" Width="610" FontSize="20" Canvas.Left="425" Canvas.Top="85" Height="103"/>
+                            <Label Content="เลือกขอบ" FontSize="18" Canvas.Left="425" Canvas.Top="188" />
+                            <Label Content="เลือกขนาด" FontSize="18" Canvas.Left="713" Canvas.Top="188" />
+                            <Canvas  >
+
+                                <Border Canvas.Left="1001" CornerRadius="10,10,10,10" Height="56"  Width="244" Canvas.Top="236" Background="#CCFF0000" x:Name="Budget3" >
+
+                                    <Border.Style>
+                                        <Style TargetType="{x:Type Border}">
+                                            <Setter Property="Background" Value="Black"/>
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Background"  Value="#FFFFB3B3"/>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Border.Style>
+
+                                    <Canvas Width="247">
+                                        <Image Source="/Pizza_Project;component/images/icon/White_shopping-basket.png" Width="40" Height="42" Canvas.Left="192" Canvas.Top="7"/>
+                                        <Label Content="+" FontSize="36" Foreground="White" Canvas.Left="162" Canvas.Top="-11"/>
+                                        <Label Content="บาท" Foreground="White" FontSize="24" Canvas.Left="94" Height="52" Width="46" Canvas.Top="4" />
+                                        <Label Content="319" HorizontalAlignment="Left" Canvas.Left="10" Canvas.Top="6" FontSize="22" Foreground="White" x:Name="Result_price3" Width="91" Height="40"/>
+
+                                    </Canvas>
+
+                                </Border>
+                            </Canvas>
+
+
+                        </Canvas>
+
+                    </DockPanel>
+                </Button>
+                <!--Bt04-->
+                <Button Height="357"  FontFamily="supermarket" Style="{DynamicResource menubutonPizza}" RenderTransformOrigin="0.63,0.512" Margin="0" Canvas.Left="120" VerticalAlignment="Center" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Canvas.Top="1059" >
+                    <DockPanel Width="1265" Height="330" HorizontalAlignment="Center" >
+                        <Canvas>
+                            <Image Source="/Pizza_Project;component/images/Pizza/Pan_04.png" Width="420" Height="330"  />
+                            <ComboBox Width="260" Canvas.Left="425" Canvas.Top="229" Height="70" Background="#FF00703C" BorderBrush="{x:Null}" Foreground="Black"  x:Name="pizzaType4"  FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center" SelectionChanged="pizzaType4_SelectionChanged" >
+                                <ComboBoxItem Foreground="Black"   IsSelected="True" Height="60" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,-1,0" Width="260" Content="แป้งหนานุ่ม"/>
+                                <ComboBoxItem Foreground="Black"  Height="60" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,-1,0" Width="260" Content="แป้งบางกรอบ"/>
+                                <ComboBoxItem Foreground="Black"   Height="60" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="1,0" Width="257" Content="เอ็กซ์ตรีม ขอบชีส"/>
+                                <ComboBoxItem Foreground="Black"  Height="60" Content="เอ็กซ์ตรีม ไส้กรอกและชีส"/>
+                            </ComboBox>
+                            <!--SIZE Pizza-->
+                            <ComboBox x:Name="pizzaSize4" Width="260" Canvas.Left="713" Canvas.Top="229" Height="70" HorizontalAlignment="Center" FontSize="22" VerticalAlignment="Center" SelectionChanged="pizzaSize4_SelectionChanged"  >
+                                <ComboBoxItem Foreground="Black"  Height="60" IsSelected="True" Margin="0" Width="260" Content="กลาง"/>
+                                <ComboBoxItem Foreground="Black"  Width="260" Height="60" Content="ใหญ่"/>
+                            </ComboBox>
+                            <Label Content="ซุปเปอร์เดอลุกซ์" HorizontalAlignment="Left"  FontSize="36" Canvas.Left="396" Canvas.Top="28" />
+                            <Label Content="เป๊ปเปอโรนี เห็ด สัปปะรด หัวหอม พริกหยวก แฮม เบคอนแผ่น ไส้กรอกหมูรมควัน ไส้กรอกอิตาเลียน&#xD;&#xA;มอสซาเรลล่าชีส ซอสพิซซ่า" Width="817" FontSize="20" Canvas.Left="425" Canvas.Top="85" Height="98"/>
+                            <Label Content="เลือกขอบ" FontSize="18" Canvas.Left="425" Canvas.Top="188" />
+                            <Label Content="เลือกขนาด" FontSize="18" Canvas.Left="713" Canvas.Top="188" />
+                            <Canvas  >
+
+                                <Border Canvas.Left="1001" CornerRadius="10,10,10,10" Height="56"  Width="244" Canvas.Top="236" Background="#CCFF0000" x:Name="Budget4" >
+
+                                    <Border.Style>
+                                        <Style TargetType="{x:Type Border}">
+                                            <Setter Property="Background" Value="Black"/>
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Background"  Value="#FFFFB3B3"/>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Border.Style>
+
+                                    <Canvas Width="247">
+                                        <Image Source="/Pizza_Project;component/images/icon/White_shopping-basket.png" Width="40" Height="42" Canvas.Left="192" Canvas.Top="7"/>
+                                        <Label Content="+" FontSize="36" Foreground="White" Canvas.Left="162" Canvas.Top="-11"/>
+                                        <Label Content="บาท" Foreground="White" FontSize="24" Canvas.Left="94" Height="52" Width="46" Canvas.Top="4" />
+                                        <Label Content="319" HorizontalAlignment="Left" Canvas.Left="10" Canvas.Top="6" FontSize="22" Foreground="White" x:Name="Result_price4" Width="91" Height="40"/>
+
+                                    </Canvas>
+
+                                </Border>
+                            </Canvas>
+
+
+                        </Canvas>
+
+                    </DockPanel>
+                </Button>
+                <!--Bt05-->
+                <Button Height="357"  FontFamily="supermarket" Style="{DynamicResource menubutonPizza}" RenderTransformOrigin="0.63,0.512" Margin="0" Canvas.Left="120" VerticalAlignment="Center" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Canvas.Top="1421" >
+                    <DockPanel Width="1265" Height="330" HorizontalAlignment="Center" >
+                        <Canvas>
+                            <Image Source="/Pizza_Project;component/images/Pizza/Pan_05.png" Width="420" Height="330"  />
+                            <ComboBox Width="260" Canvas.Left="425" Canvas.Top="229" Height="70" Background="#FF00703C" BorderBrush="{x:Null}" Foreground="Black"  x:Name="pizzaType5"  FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center" SelectionChanged="pizzaType5_SelectionChanged" >
+                                <ComboBoxItem Foreground="Black"   IsSelected="True" Height="60" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,-1,0" Width="260" Content="แป้งหนานุ่ม"/>
+                                <ComboBoxItem Foreground="Black"  Height="60" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,-1,0" Width="260" Content="แป้งบางกรอบ"/>
+                                <ComboBoxItem Foreground="Black"   Height="60" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="1,0" Width="257" Content="เอ็กซ์ตรีม ขอบชีส"/>
+                                <ComboBoxItem Foreground="Black"  Height="60" Content="เอ็กซ์ตรีม ไส้กรอกและชีส"/>
+                            </ComboBox>
+                            <!--SIZE Pizza-->
+                            <ComboBox x:Name="pizzaSize5" Width="260" Canvas.Left="713" Canvas.Top="229" Height="70" HorizontalAlignment="Center" FontSize="22" VerticalAlignment="Center" SelectionChanged="pizzaSize5_SelectionChanged"  >
+                                <ComboBoxItem Foreground="Black"  Height="60" IsSelected="True" Margin="0" Width="260" Content="กลาง"/>
+                                <ComboBoxItem Foreground="Black"  Width="260" Height="60" Content="ใหญ่"/>
+                            </ComboBox>
+                            <Label Content="ไก่สามรส" HorizontalAlignment="Left"  FontSize="36" Canvas.Left="396" Canvas.Top="28" />
+                            <Label Content="เห็ด ไก่ย่าง ไก่เนยกระเทียม ไก่หมักซอส พริกแดง พริกเขียว มอสซาเรลล่าชีส ซอสพิซซ่า" Width="793" FontSize="20" Canvas.Left="425" Canvas.Top="85" Height="98"/>
+                            <Label Content="เลือกขอบ" FontSize="18" Canvas.Left="425" Canvas.Top="188" />
+                            <Label Content="เลือกขนาด" FontSize="18" Canvas.Left="713" Canvas.Top="188" />
+                            <Canvas  >
+
+                                <Border Canvas.Left="1001" CornerRadius="10,10,10,10" Height="56"  Width="244" Canvas.Top="236" Background="#CCFF0000" x:Name="Budget5" >
+
+                                    <Border.Style>
+                                        <Style TargetType="{x:Type Border}">
+                                            <Setter Property="Background" Value="Black"/>
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Background"  Value="#FFFFB3B3"/>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Border.Style>
+
+                                    <Canvas Width="247">
+                                        <Image Source="/Pizza_Project;component/images/icon/White_shopping-basket.png" Width="40" Height="42" Canvas.Left="192" Canvas.Top="7"/>
+                                        <Label Content="+" FontSize="36" Foreground="White" Canvas.Left="162" Canvas.Top="-11"/>
+                                        <Label Content="บาท" Foreground="White" FontSize="24" Canvas.Left="94" Height="52" Width="46" Canvas.Top="4" />
+                                        <Label Content="319" HorizontalAlignment="Left" Canvas.Left="10" Canvas.Top="6" FontSize="22" Foreground="White" x:Name="Result_price5" Width="91" Height="40"/>
+
+                                    </Canvas>
+
+                                </Border>
+                            </Canvas>
+
+
+                        </Canvas>
+
+                    </DockPanel>
+                </Button>
+
+            </Canvas>
+
+        </StackPanel>
+    </Grid>
+</UserControl>
